@@ -69,3 +69,15 @@
 .nav-link:hover::after {
   width: 50%;
 }
+
+.h1 {
+  @apply text-sm uppercase font-semibold mb-4 text-primary tracking-[4px];
+}
+
+.h2 {
+  @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold;
+}
+
+.h3 {
+  @apply max-w-[490px] mx-auto xl:mx-0;
+}
