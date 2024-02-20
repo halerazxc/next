@@ -30,7 +30,7 @@ const Header = () => {
           header ? 'shadow-lg py-[15px] ' : 'py-[20px]'
         } sticky top-0 z-30 left-0 right-0 transition-all duration-30 bg-white dark:bg-[#1C1B22] `}
       >
-        <div className='container mx-auto '>
+        <div className='container '>
           <div className='flex items-center justify-between'>
             <Image
               src='logo.svg'
