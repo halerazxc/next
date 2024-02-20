@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/ui/Header'
-import Footer from '@/components/Footer'
+import Footer from '@/components/ui/Footer'
+import { ThemeProvider } from '@/components/ui/ThemeProvider'
 
 const inter = Montserrat({ subsets: ['latin'] })
 
@@ -17,11 +18,13 @@ export default function RootLayout ({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider attribute='class' defaultTheme='light'>
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )
