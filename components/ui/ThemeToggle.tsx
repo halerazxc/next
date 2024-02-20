@@ -9,7 +9,9 @@ const ThemeToggle = () => {
 
   return (
     <Button
-      className='rounded-[12px]'
+      variant='outline'
+      size='icon'
+      className='rounded-full'
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       <SunIcon className='h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all duration-200 dark:-rotate-90 dark:scale-0' />
