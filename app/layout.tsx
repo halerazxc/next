@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Outfit } from 'next/font/google'
 import './globals.css'
-import Header from '@/components/ui/Header'
-import Footer from '@/components/ui/Footer'
-import { ThemeProvider } from '@/components/ui/ThemeProvider'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import { ThemeProvider } from '@/components/ThemeProvider'
 
-const inter = Montserrat({ subsets: ['latin'] })
+const outfit = Outfit({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +19,7 @@ export default function RootLayout ({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={outfit.className}>
         <ThemeProvider attribute='class' defaultTheme='light'>
           <div className='flex flex-col min-h-screen'>
             <Header />
